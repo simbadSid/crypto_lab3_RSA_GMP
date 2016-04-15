@@ -25,7 +25,8 @@ int main()
 	mpz_t size, *prime;
 
 	mpz_init_set_ui(size, 100);
-	prime = LargePrime::getPrime_seiveErathosten(size);
+//	prime = LargePrime::getPrime_seiveErathosten(size, NULL);
+	prime = LargePrime::getPrime_trialDivision(size, NULL);
 std::cout << "\nResult = " << mpz_get_str(NULL, 10, *prime) <<"\n";
 
 	free(prime);
